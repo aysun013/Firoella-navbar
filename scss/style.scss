@@ -1,0 +1,142 @@
+@import './common/common';
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .logo {
+
+            padding: 50px 0;
+
+
+            img {
+                width: 205px;
+            }
+        }
+
+        .menu {
+
+
+            ul {
+                display: flex;
+                margin-bottom: 0;
+
+                li {
+                    display: flex;
+                    padding: 0 40px;
+                    position: relative;
+                    z-index: 1;
+                    
+
+                    a {
+                        font-family: Montserrat, sans-serif;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: #1b1b1b;
+                        font-size: 12px;
+                        letter-spacing: .1em;
+                        position: relative;
+                        
+
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            left: 0;
+                            bottom: 0;
+                            width: 0;
+                            height: .1px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: 0.5s ease;
+
+                        }
+
+                        &:hover::before {
+                            width: 100%;
+                            background-color: #1b1b1b;
+                            opacity: 1;
+                            visibility: visible;
+
+
+                        }
+
+                    }
+
+
+
+                    .submenu {
+                        height: 0px;
+                        // padding-top: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        left: 0;
+                        background-color: #fff;
+                        top: 72px;
+                        visibility: hidden;
+                        opacity: 0;
+                        overflow: hidden;
+                        // transform: translateY(0);
+                        transition: .3s linear;
+
+                        
+
+
+
+                        li {
+                            width: 170px;
+                            // height: auto;
+                            padding: 10px;
+
+
+                            a {
+                                text-transform: capitalize;
+                            }
+                        }
+
+                    }
+
+
+
+
+                }
+
+                li:hover .submenu {
+                    visibility: visible;
+                    opacity: 1;
+                    overflow: visible;
+                    
+                    height: 200px;
+                    // background-color: red;
+                    
+                }
+            }
+        }
+    }
+}
+
+section{
+    .carousel-inner{
+        .carousel-item{
+            img{
+                height: 500px;
+                width: 100%;
+                object-fit:cover;
+            }
+        }
+
+    }
+}
