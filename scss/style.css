@@ -30,74 +30,82 @@ header nav .logo {
   padding: 50px 0;
 }
 header nav .logo img {
-  width: 205px;
+  max-width: 205px;
 }
-header nav .menu ul {
-  display: flex;
-  margin-bottom: 0;
+header nav .menu {
+  display: none;
 }
-header nav .menu ul li {
-  display: flex;
-  padding: 0 40px;
-  position: relative;
-  z-index: 1;
-}
-header nav .menu ul li a {
-  font-family: Montserrat, sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #1b1b1b;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  position: relative;
-}
-header nav .menu ul li a::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0.1px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s ease;
-}
-header nav .menu ul li a:hover::before {
-  width: 100%;
-  background-color: #1b1b1b;
-  opacity: 1;
-  visibility: visible;
-}
-header nav .menu ul li .submenu {
-  height: 0px;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  background-color: #fff;
-  top: 72px;
-  visibility: hidden;
-  opacity: 0;
-  overflow: hidden;
-  transition: 0.3s linear;
-}
-header nav .menu ul li .submenu li {
-  width: 170px;
-  padding: 10px;
-}
-header nav .menu ul li .submenu li a {
-  text-transform: capitalize;
-}
-header nav .menu ul li:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-  overflow: visible;
-  height: 200px;
+@media (min-width: 1024px) {
+  header nav .menu {
+    display: flex;
+  }
+  header nav .menu ul {
+    display: flex;
+    margin-bottom: 0;
+  }
+  header nav .menu ul li {
+    display: flex;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+  }
+  header nav .menu ul li a {
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1b1b1b;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    position: relative;
+  }
+  header nav .menu ul li a::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.1px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+  }
+  header nav .menu ul li a:hover::before {
+    width: 100%;
+    background-color: #1b1b1b;
+    opacity: 1;
+    visibility: visible;
+  }
+  header nav .menu ul li .submenu {
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    top: 72px;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.3s linear;
+  }
+  header nav .menu ul li .submenu li {
+    width: 170px;
+    padding: 10px;
+  }
+  header nav .menu ul li .submenu li a {
+    text-transform: capitalize;
+  }
+  header nav .menu ul li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
+    height: 200px;
+  }
 }
 
 section .carousel-inner .carousel-item img {
-  height: 500px;
+  height: 568px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
